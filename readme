@@ -1,0 +1,25 @@
+# Blackjack Web App
+This Blackjack web app features a welcome screen where you enter your name, a dynamic game screen with a glowing scoreboard, and clear card displays using text and suit symbols. The game is responsive, animated, and easy to use on both desktop and mobile devices.
+
+---
+
+## How to Play
+
+1. **Enter your name** on the welcome screen and click "Start Game".
+2. **Deal** to start a new round.
+3. **Hit** to draw another card.
+4. **Stand** to end your turn and let the dealer play.
+5. **Change Name** to update your player name at any time.
+6. **Watch the game message** to see who wins each round!
+
+The goal is to get as close to 21 as possible without going over.  
+The dealer must hit until their hand is at least 17.
+
+---
+
+### How to Install
+
+1. **Clone the repository:**
+2. **Open the project folder:**
+3. **Open `index.html` in your browser.**  
+*For best results, use a local server (e.g., VS Code Live Server or `python -m http.server`).*

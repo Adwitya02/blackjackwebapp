@@ -1,0 +1,183 @@
+/* ---------- ROOT THEME ---------- */
+:root {
+    --felt-green: #0f5d2f;
+    --felt-dark: #0c4a26;
+    --panel: rgba(0, 0, 0, 0.35);
+    --panel-light: rgba(255, 255, 255, 0.07);
+    --border: rgba(255, 255, 255, 0.15);
+
+    --text: #f3f3f3;
+    --text-soft: #d8d8d8;
+    --gold: #d8b45f;
+
+    --neon: #4f8bff;
+    --neon-purple: #9d6bff;
+
+    --radius: 14px;
+    --shadow-deep: 0 10px 30px rgba(0, 0, 0, 0.45);
+    --transition: 0.28s ease;
+}
+
+/* ---------- GLOBAL ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at center, var(--felt-green), var(--felt-dark) 80%);
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: var(--text);
+}
+
+/* ---------- SCREEN CONTAINERS ---------- */
+.screen {
+    width: 100%;
+    max-width: 800px;
+    padding: 28px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-deep);
+}
+
+.hidden {
+    display: none;
+}
+
+/* ---------- TITLES ---------- */
+h1 {
+    text-align: center;
+    color: var(--gold);
+    margin-bottom: 20px;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+/* ---------- INPUTS ---------- */
+input {
+    padding: 12px 14px;
+    background: var(--panel-light);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    outline: none;
+    transition: var(--transition);
+}
+
+input:focus {
+    border-color: var(--neon);
+    box-shadow: 0 0 8px var(--neon);
+}
+
+/* ---------- BUTTONS ---------- */
+button {
+    padding: 12px 16px;
+    border-radius: var(--radius);
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--neon), var(--neon-purple));
+    color: white;
+    transition: var(--transition);
+    box-shadow: 0 0 7px var(--neon);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px var(--neon);
+}
+
+button:disabled {
+    opacity: 0.45;
+    cursor: default;
+    box-shadow: none;
+}
+
+/* Secondary button */
+button[type="button"] {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text);
+    box-shadow: none;
+}
+
+/* ---------- SCOREBOARD ---------- */
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 18px;
+    margin-bottom: 26px;
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(6px);
+    font-size: 15px;
+    color: var(--gold);
+    box-shadow: 0 0 8px rgba(79, 139, 255, 0.25);
+}
+
+/* ---------- CARD AREAS ---------- */
+.dealer-area,
+.player-area {
+    margin-bottom: 34px;
+}
+
+h2 {
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: var(--gold);
+}
+
+/* ---------- CARDS ---------- */
+.cards-container {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 16px 20px;
+    min-width: 60px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    font-size: 20px;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(79, 139, 255, 0.25);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 14px rgba(79, 139, 255, 0.35);
+}
+
+/* ---------- MESSAGES ---------- */
+.game-message {
+    text-align: center;
+    margin: 14px 0 22px;
+    font-size: 22px;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.game-message.show {
+    opacity: 1;
+}
+
+/* ---------- CONTROLS ---------- */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+}
